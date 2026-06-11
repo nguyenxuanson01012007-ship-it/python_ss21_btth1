@@ -6,7 +6,7 @@ logging.basicConfig(
     level = logging.INFO,
     format='[%(asctime)s]-[%(levelname)s]-[%(message)s]'
 )
-# nhập tiền
+
 def recharge():
     global balance
     print("--- NẠP TIỀN VÀO VÍ ---")
@@ -30,13 +30,12 @@ def recharge():
         except ValueError as e:
             logging.error(f' "ValueError: Invalid numeric input for deposit."')
             print("Lỗi ",e)
-# Liểm tra số điện thoại
+
 def check_phone(phone):
     if len(phone) != 10 or not phone.isdigit()   or not phone.startswith('0'):
         return False
     return phone
 
-# chuyển tiền
 def Transfer():
     global balance
     print("--- CHUYỂN TIỀN ---")
@@ -80,7 +79,6 @@ def read_logs():
             print(f"{i}. {line.strip()}")
             i += 1
     
-# xem số dư
 def check_balance():
     global balance
 
